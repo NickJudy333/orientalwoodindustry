@@ -112,9 +112,12 @@
             align-items: center;
             text-align: center;
             padding: 0 1rem;
-            background: linear-gradient(rgba(11,11,11,0.6), rgba(11,11,11,0.8)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="%23141414" width="50" height="50"/><rect fill="%231c1c1c" x="50" width="50" height="50"/><rect fill="%231c1c1c" y="50" width="50" height="50"/><rect fill="%23141414" x="50" y="50" width="50" height="50"/></svg>');
-            background-size: 60px 60px;
+            /* 修改这里：加入线性渐变遮罩 + 您的图片路径，保证文字清晰可见 */
+            background: linear-gradient(rgba(11,11,11,0.5), rgba(11,11,11,0.7)), url('images/banner1.png');
+            background-size: cover;       /* 让图片平铺满整个区域 */
+            background-position: center;  /* 让图片居中显示 */
             border-bottom: 1px solid var(--border);
+        }
         }
 
         .hero h1 {
@@ -483,8 +486,8 @@
     <!-- 1. Home Page -->
     <div id="page-home" class="page-view active">
         <section class="hero">
-            <h1>Home Furnishing * Haute Customization[cite: 20]</h1>
-            <p>Whole House Integration (Door, Wall, and Cabinet)[cite: 20] — Heart Returning to Nature, Coexistence and Mutual Beauty[cite: 20].</p>
+            <h1>Home Furnishing * Haute Customization</h1>
+            <p>Whole House Integration (Door, Wall, and Cabinet) — Heart Returning to Nature, Coexistence and Mutual Beauty.</p>
             <button class="btn" onclick="switchPage('products')">Explore Collection</button>
         </section>
 
